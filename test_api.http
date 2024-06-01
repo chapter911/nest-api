@@ -1,2 +1,32 @@
 ###
 GET http://localhost:3000
+
+###
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/2
+
+###
+GET http://localhost:3000/users/byQuery?name=agung
+
+###
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+    "username" : "admin",
+    "password" : "test"
+}
+
+###
+PATCH http://localhost:3000/users/2
+content-type: application/json
+
+{
+    "username" : "admin",
+    "password" : "test"
+}
+
+###
+DELETE http://localhost:3000/users/2

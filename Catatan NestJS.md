@@ -10,6 +10,7 @@ menjalankan project :
 
 menambahkan module
 - nest g module users
+- tambahkan di users.module.ts
 
 menambahkan controller
 - nest g controller users
@@ -17,11 +18,12 @@ menambahkan controller
 menambahkan service
 - nest g service users
 
-<!-- instalasi prisma :
-- npm install prisma --save-dev
-
-tools untuk development :
-- npm i @prisma/client
-
-membuat skema file prisma :
-- npx prisma init -->
+ketik ini terlebih dahulu di users.controller.ts :
+/*
+    GET /users
+    GET /users/:id
+    POST /users
+    PATCH /users/:id
+*/
+kemudian jalankan perintah AI
+make each function
