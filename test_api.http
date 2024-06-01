@@ -21,12 +21,12 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/users/4
+PATCH http://localhost:3000/users/6
 content-type: application/json
 
 {
-    "name": "Agung",
-    "email": "agung@example.com",
+    "name": "Mahaveer",
+    "email": "veer@example.com",
     "role": "admin"
 }
 

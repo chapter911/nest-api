@@ -10,7 +10,6 @@ menjalankan project :
 
 menambahkan module
 - nest g module users
-- tambahkan di users.module.ts
 
 menambahkan controller
 - nest g controller users
@@ -21,24 +20,21 @@ menambahkan service
 ketik ini terlebih dahulu di users.controller.ts :
 /*
     GET /users
+    GET /users/byQuery?name=John
     GET /users/:id
     POST /users
     PATCH /users/:id
+    DELETE /users/:id
 */
 kemudian jalankan perintah AI
 make each function
 
-update usersservice.ts
+update users.service.ts
 gunakan format yang sudah ada terlebih dahulu
 
-kemudian perbaiki lagi users.controller.ts
+tambahkan di users.controller.ts
+constructor(private readonly usersService: UsersService) {}
 
-tambahkan parseintpipe di users.controller.ts
+tambahkan parseintpipe untuk setiap id di users.controller.ts
 
-buat folder dto di folder users
-dto (data transfer object)
-- buat create-user.dto.ts
-- buat update-user.dto.ts
-
-jalankan npm i @nest/mapped-types -D
-(-D untuk development)
+kemudian perbaiki seluruh return di users.controller.ts
