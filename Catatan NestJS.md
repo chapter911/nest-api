@@ -27,3 +27,18 @@ ketik ini terlebih dahulu di users.controller.ts :
 */
 kemudian jalankan perintah AI
 make each function
+
+update usersservice.ts
+gunakan format yang sudah ada terlebih dahulu
+
+kemudian perbaiki lagi users.controller.ts
+
+tambahkan parseintpipe di users.controller.ts
+
+buat folder dto di folder users
+dto (data transfer object)
+- buat create-user.dto.ts
+- buat update-user.dto.ts
+
+jalankan npm i @nest/mapped-types -D
+(-D untuk development)
