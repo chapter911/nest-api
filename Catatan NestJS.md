@@ -65,7 +65,8 @@ update(@Param('id', ParseIntPipe) id: number, @Body() updateUserDto: UpdateUserD
 perbaiki untuk bagian update (users.service.ts)
 update(id: number, updateUserDto: UpdateUserDto) { ... }
 
-tambahkan "npm i class-validator class-transformer" sebagai validator dari data yang akan di masukkan
+jalankan "npm i class-validator class-transformer" di terminal
+ini sebagai validator dari data yang akan di masukkan
 
 perbaiki bagian create-user.dto.ts
 ![alt text](image-2.png)
@@ -78,3 +79,46 @@ update(@Param('id') id: string, @Body(ValidationPipe) updateUserDto: UpdateUserD
 
 tambahkan fitur jika role gagal di temukan (NotFound Exception di users.service.ts)
 tambahkan fitur jika user gagal di temukan (NotFound Exception di users.service.ts)
+
+jalankan "npm i prisma -D" di terminal
+ini untuk menghubungkan ke database
+
+jika kita tidak belum memiliki tabel maka jalankan "npx prisma init" (gunakan ini saja)
+jika kita sudah memiliki tabel maka jalankan "npx prisma db pull" (ini belum di pelajari)
+
+setelah itu cek file .env dan perbaiki koneksi databasenya
+DATABASE_URL="postgresql://postgres:P@ssw0rd@localhost:5432/training?schema=public"
+
+install prisma extension di vscode
+
+tambahkan model user di schema.prisma
+![alt text](image-3.png)
+
+jalankan perintah "npx prisma migrate dev --name init" untuk membuat tablenya pertama kali
+
+jalankan "nest g module database"
+untuk membuat modul database
+
+jalankan "nest g service database"
+untuk membuat service database
+
+perbaiki database module terlebih dahulu
+![alt text](image-4.png)
+
+perbaiki database service
+![alt text](image-5.png)
+
+tambahkan di users.module.ts
+![alt text](image-6.png)
+
+jalankan "npm install @nestjs/config" di terminal
+
+tambahkan file di folder src/prisma
+- prisma.module.ts
+- ![alt text](image-7.png)
+- prisma.service.ts
+- ![alt text](image-8.png)
+
+jalankan "npm install --save @nestjs/serve-static" di terminal
+
+untuk hashing password dapat menggunakan argon2
